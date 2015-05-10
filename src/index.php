@@ -113,8 +113,8 @@
       echo "<tr>";
       echo "<td>" . $name . "<td>" . $category . "<td>" . $length . "<td>" . $rented;
       //forms within tables found at: http://stackoverflow.com/questions/5528419/html-table-with-button-on-each-row
-      echo "<td> <form action='update.php' method='post'> <input type='submit' name='" . $id . "' value='Change Status'> </form>";
-      echo "<td> <form action='delete.php' method='post'> <input type='submit' name='" . $id . "' value='Delete'> </form>";
+      echo "<td> <form action='update.php' method='post'> <button type='submit' name='upd' value='" . $id . "'>Change Status</button></form>";
+      echo "<td> <form action='delete.php' method='post'> <button type='submit' name='del' value='" . $id . "'>Delete</button></form>";
     }
     
     $stmt->close();
@@ -123,7 +123,7 @@
     </tbody>
   </table>
   <form action = "delete.php" method = "post">
-    <input type="submit" name="all" value='Delete All'>
+    <button type="submit" name="del" value="all">Delete All</button>
   </form>"
   </body>
 </html>

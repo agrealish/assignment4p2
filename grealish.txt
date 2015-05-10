@@ -6,9 +6,9 @@ Start: Sun, 10 May 2015 13:15:33 -0700
 End: Sun, 10 May 2015 14:46:33 -0700
 Tasks: During this time I completed my initial version of index.php and deleted the showtable.php file determining that what I had intended to include there would be better suited for index.php. Index.php still needs testing, but will wait until I have test values in the table and the table is created.
 
-Start:
-End:
-Tasks
+Start: Sun, 10 May 2015 15:12:09 -0700
+End: Sun, 10 May 2015 15:33:09 -0700
+Tasks: During this time I created the table to connect to, populated it with test values (from the discussion board) and tested my index.php file.
 
 Start:
 End:
