@@ -34,10 +34,11 @@
       echo "There was a connection error " . $mysqli->connect_errno . " " . $mysqli->connect_error;
     }
     
-    $catResult = $mysqli->query("SELECT DISTINCT category FROM videos ORDER BY category ASC");
+    $catResult = $mysqli->query("SELECT DISTINCT category FROM videos ORDER BY category ASC");    
     
     while ($cat = $catResult->fetch_assoc()) {
-      echo "<option value='" . $cat . "'>" . $cat . "</option>";
+      echo "<option value='" . $cat['category'] . "'>" . $cat['category'] . "</option>";
+      $i++;
     }
     echo "</select>";
     echo "<input type='submit' value='Filter by Genre'>";

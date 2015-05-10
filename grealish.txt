@@ -2,9 +2,9 @@ Start: Sun, 10 May 2015 12:24:31 -0700
 End: Sun, 10 May 2015 12:53:31 -0700
 Tasks: During this time I read the assignment, outlined the files I would need and the database columns needed, and created my initial files.
 
-Start:
-End:
-Tasks
+Start: Sun, 10 May 2015 13:15:33 -0700
+End: Sun, 10 May 2015 14:46:33 -0700
+Tasks: During this time I completed my initial version of index.php and deleted the showtable.php file determining that what I had intended to include there would be better suited for index.php. Index.php still needs testing, but will wait until I have test values in the table and the table is created.
 
 Start:
 End:
