@@ -10,9 +10,9 @@ Start: Sun, 10 May 2015 15:12:09 -0700
 End: Sun, 10 May 2015 15:33:09 -0700
 Tasks: During this time I created the table to connect to, populated it with test values (from the discussion board) and tested my index.php file.
 
-Start:
-End:
-Tasks
+Start: Sun, 10 May 2015 15:33:09 -0700
+End: Sun, 10 May 2015 16:28:10 -0700
+Tasks: During this time I completed my initial version of add.php, delete.php, and update.php and updated index.php according to how these new files were using it.
 
 Start:
 End:

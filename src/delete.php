@@ -27,7 +27,7 @@
       else {
         echo "<p>All videos successfully deleted.</p>";
       }
-    } else if($_POST['del'] != "" && $POST['del'] != 'all') { //delete specific video
+    } else if($_POST['del'] != "" && $_POST['del'] != 'all') { //delete specific video
       //if statements below come from the mysqli quickstart for prepared statements from php.net
       //prepare statement
       $id = (int)$_POST['del'];

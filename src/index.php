@@ -37,8 +37,10 @@
     $catResult = $mysqli->query("SELECT DISTINCT category FROM videos ORDER BY category ASC");    
     
     while ($cat = $catResult->fetch_assoc()) {
-      echo "<option value='" . $cat['category'] . "'>" . $cat['category'] . "</option>";
-      $i++;
+      if(!is_null($cat['category'])) {
+        echo "<option value='" . $cat['category'] . "'>" . $cat['category'] . "</option>";
+        $i++;
+      }
     }
     echo "</select>";
     echo "<input type='submit' value='Filter by Genre'>";
@@ -113,7 +115,7 @@
       echo "<tr>";
       echo "<td>" . $name . "<td>" . $category . "<td>" . $length . "<td>" . $rented;
       //forms within tables found at: http://stackoverflow.com/questions/5528419/html-table-with-button-on-each-row
-      echo "<td> <form action='update.php' method='post'> <button type='submit' name='upd' value='" . $id . "'>Change Status</button></form>";
+      echo "<td> <form action='update.php' method='post'> <input type='hidden' name='rent' value='" . $status . "'> <button type='submit' name='upd' value='" . $id . "'>Change Status</button></form>";
       echo "<td> <form action='delete.php' method='post'> <button type='submit' name='del' value='" . $id . "'>Delete</button></form>";
     }
     
@@ -124,6 +126,6 @@
   </table>
   <form action = "delete.php" method = "post">
     <button type="submit" name="del" value="all">Delete All</button>
-  </form>"
+  </form>
   </body>
 </html>

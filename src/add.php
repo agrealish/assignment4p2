@@ -21,14 +21,17 @@
       $eCheck = true;
       echo "<p>No Video Title provided.  Video Title is a required field.</p>";
     }
-    if(isset($_POST['length'])) { //checks the length field - if it exists
-      if(!(is_numeric($_POST['length'])) && ((int)$_POST['length']) < 0) {
+    if($_POST['length']!="") { //checks the length field - if it exists
+      if(!(is_numeric($_POST['length']))) {
+        $eCheck = true;
+        echo "<p>The length of the video is invalid.  It must be an integer.";
+      } else if ((int)$_POST['length']<0) {
         $eCheck = true;
         echo "<p>The length of the video is invalid.  It must be a postive integer.";
       }
     }
     
-    if(!eCheck) { //if no errors, add to table
+    if(!$eCheck) { //if no errors, add to table
       $vName = $_POST['name'];
       $vCat = NULL;
       $vLength = NULL;
@@ -55,11 +58,11 @@
       else {
         echo "<p>Video successfully added to table.</p>";
       }
+      $stmt->close();
     }
     
     echo '<p>Please click <a href="index.php">here</a> to return to the main page.</p>';
     
-    $stmt->close();
     $mysqli->close();
   ?>
   </body>
